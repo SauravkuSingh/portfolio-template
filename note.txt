@@ -1,0 +1,9 @@
+ bro change the nav as keep the left name logo and remove the cneter content and in the rifght add the hamburger icnon that open the skipper like     
+   menu with big text and as i hover that links as about home , projects and contact roll the words and in the hero section add the beautiful image as  
+   bg as in gray scale and in the content as add the Hey. I am in sliightly small in 1st font and another line Anne in second font but the font size    
+   will be way big ok and below that add the three box with white border and in the three of them add the content like Digital Product Designer along   
+   with the download resume button in the 1st box , in secons box add this content Passionate UI/UX Designer                                            
+   Crafting Engaging, User-                                                                                                                             
+   Centered Websites, Apps,                                                                                                                             
+   Branding. along with the get in touch button along with the arrow icon and in the 3rd box add a carosuil with multiple images of the project ok and  
+   put the both the arrow in the right so that it control the carosil images  

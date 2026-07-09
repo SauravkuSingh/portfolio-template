@@ -1,113 +1,251 @@
+"use client";
+
+import Image from "next/image";
+import { motion } from "framer-motion";
+import { ArrowRight } from "lucide-react";
 import TransitionLink from "./components/TransitionLink";
-
-const highlights = [
-  { label: "Years building", value: "5+" },
-  { label: "Projects shipped", value: "24" },
-  { label: "Clients helped", value: "12" },
-];
-
-const featuredProjects = [
-  {
-    title: "SaaS Dashboard",
-    description: "A multi-tenant analytics product with lightning-fast interactions.",
-    stack: ["Next.js", "TypeScript", "Motion"],
-  },
-  {
-    title: "Brand Studio",
-    description: "A polished marketing site with cinematic transitions and strong storytelling.",
-    stack: ["React", "Tailwind", "Framer Motion"],
-  },
-];
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-[radial-gradient(circle_at_top,_rgba(255,255,255,0.08),_transparent_45%)]">
-      <section className="mx-auto flex max-w-7xl flex-col gap-16 px-6 py-16 md:px-10 lg:px-12 lg:py-24">
-        <div className="grid items-center gap-12 lg:grid-cols-[1.1fr_0.9fr]">
-          <div className="max-w-3xl space-y-8">
-            <span className="inline-flex items-center rounded-full border border-neutral-800 bg-neutral-900/70 px-4 py-2 text-xs font-mono uppercase tracking-[0.3em] text-neutral-400">
-              Full-stack designer & developer
-            </span>
-            <div className="space-y-5">
-              <h1 className="text-4xl font-semibold leading-tight tracking-tight text-white sm:text-5xl lg:text-7xl">
-                I build thoughtful digital experiences that feel sharp, fast, and memorable.
-              </h1>
-              <p className="max-w-2xl text-lg leading-8 text-neutral-400">
-                This template is ready for your portfolio, with polished sections for your story, projects, and contact details.
+    <main className="relative min-h-screen overflow-hidden bg-[#000000] text-white">
+
+      {/* Background Image */}
+    
+      <motion.div
+        initial={{ scale: 1.15 }}
+        animate={{ scale: 1 }}
+        transition={{ duration: 2 }}
+        className="absolute inset-0"
+      >
+        <Image
+          src="/images/hero.jpg"
+          alt="Anne"
+          fill
+          priority
+          className="object-cover object-center"
+        />
+      </motion.div>
+
+      {/* Dark Overlay */}
+
+      <div className="absolute inset-0 bg-black/35" />
+
+      {/* Gradient */}
+
+      <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-[#111111]" />
+
+    
+
+      {/* Hero */}
+
+      <section className="relative z-10 flex min-h-screen flex-col justify-between">
+
+        {/* TOP */}
+
+        <div className="mx-auto flex w-full max-w-[1700px] flex-1 items-center px-10 mt-35">
+
+          <div className="max-w-4xl">
+
+            <motion.p
+              initial={{
+                opacity: 0,
+                y: 40,
+              }}
+              animate={{
+                opacity: 1,
+                y: 0,
+              }}
+              transition={{
+                delay: .1,
+                duration: .5,
+              }}
+              className="mb-5 text-sm uppercase tracking-[0.5em] text-white"
+            >
+              Passionate UI / UX Designer
+            </motion.p>
+
+            <motion.h1
+              initial={{
+                opacity: 0,
+                y: 80,
+              }}
+              animate={{
+                opacity: 1,
+                y: 0,
+              }}
+              transition={{
+                duration: 1,
+                ease: [0.22, 1, 0.36, 1],
+              }}
+              className="leading-none"
+            >
+
+              <span className="block font-serif text-6xl font-light ml-20">
+                Hi,  I am
+              </span>
+
+              <span className="block italic font-serif text-[160px] leading-none mt-5">
+                Anne Frank
+              </span>
+
+            </motion.h1>
+
+            <motion.div
+              initial={{
+                opacity: 0,
+                y: 30,
+              }}
+              animate={{
+                opacity: 1,
+                y: 0,
+              }}
+              transition={{
+                delay: .2,
+                duration: 0.7,
+              }}
+              className="mt-12 max-w-xl"
+            >
+
+              <p className="text-2xl leading-9 text-white">
+
+                Crafting engaging, user-centered digital
+                experiences with timeless aesthetics,
+                meaningful storytelling and premium
+                interactions.
+
               </p>
-            </div>
-            <div className="flex flex-wrap gap-4">
+
+            </motion.div>
+
+            <motion.div
+              initial={{
+                opacity: 0,
+                y: 40,
+              }}
+              animate={{
+                opacity: 1,
+                y: 0,
+              }}
+              transition={{
+                delay: 0.3,
+                duration: .7,
+              }}
+              className="mt-12 flex gap-5"
+            >
+
               <TransitionLink
                 href="/projects"
-                className="rounded-none border border-white bg-white px-6 py-3 text-sm font-semibold uppercase tracking-[0.2em] text-black transition hover:bg-transparent hover:text-white"
+                className="group flex items-center gap-3 border border-white px-8 py-5 uppercase tracking-[0.3em] transition hover:bg-white hover:text-black"
               >
-                View Projects
+                View Work
+
+                <ArrowRight
+                  size={18}
+                  className="transition-transform group-hover:translate-x-2"
+                />
+
               </TransitionLink>
+
               <TransitionLink
                 href="/contact"
-                className="rounded-none border border-neutral-700 px-6 py-3 text-sm font-semibold uppercase tracking-[0.2em] text-neutral-200 transition hover:border-white hover:text-white"
+                className="border border-white/20 px-8 py-5 uppercase tracking-[0.3em] transition hover:border-white"
               >
-                Let&apos;s Talk
+                Contact
               </TransitionLink>
-            </div>
+
+            </motion.div>
+
           </div>
 
-          <div className="rounded-none border border-neutral-800 bg-neutral-900/70 p-8 shadow-2xl shadow-black/30">
-            <div className="space-y-6">
-              <div>
-                <p className="text-xs font-mono uppercase tracking-[0.3em] text-neutral-500">About</p>
-                <h2 className="mt-2 text-2xl font-semibold text-white">Crafting modern products with clarity and motion.</h2>
-              </div>
-              <p className="text-neutral-400 leading-7">
-                From landing pages to full products, I blend strategy, visuals, and engineering to create experiences that feel effortless.
+        </div>
+
+        {/* BOTTOM */}
+
+        <motion.div
+          initial={{
+            y: 120,
+            opacity: 0,
+          }}
+          animate={{
+            y: 0,
+            opacity: 1,
+          }}
+          transition={{
+            delay: 0.4,
+            duration: 0.8,
+          }}
+          className="border-t border-white/40 backdrop-blur-md mt-10"
+        >
+
+          <div className="mx-auto grid max-w-[1700px] grid-cols-12">
+
+            {/* LEFT */}
+
+            <div className="col-span-3 border-r border-white/50 p-10">
+
+              <p className="text-xs uppercase tracking-[0.5em] text-neutral-300">
+                Expertise
               </p>
-              <div className="grid gap-4 sm:grid-cols-3">
-                {highlights.map((item) => (
-                  <div key={item.label} className="rounded-none border border-neutral-800 bg-black/60 p-4">
-                    <div className="text-xl font-semibold text-white">{item.value}</div>
-                    <div className="mt-1 text-xs uppercase tracking-[0.2em] text-neutral-500">{item.label}</div>
-                  </div>
-                ))}
+
+              <h3 className="mt-8 text-4xl font-light leading-snug">
+
+                Digital
+
+                <br />
+
+                Product
+
+                <br />
+
+                Designer
+
+              </h3>
+
+            </div>
+
+            {/* CENTER */}
+
+            <div className="col-span-6 border-r border-white/50 p-10">
+
+              <p className="text-xs uppercase tracking-[0.5em] text-neutral-300">
+                About
+              </p>
+
+              <p className="mt-8 max-w-2xl text-lg leading-9 text-white">
+
+                I help ambitious startups and brands build
+                memorable digital experiences that combine
+                elegant visuals, usability and motion to create
+                products people genuinely love using.
+
+              </p>
+
+            </div>
+
+            {/* RIGHT */}
+
+            <div className="col-span-3 p-5">
+
+              <div className="overflow-hidden">
+
+                <Image
+                  src="/images/hero.jpg"
+                  alt="Anne"
+                  width={520}
+                  height={620}
+                  className="transition duration-700 hover:scale-110 cursor-pointer"
+                />
+
               </div>
-            </div>
-          </div>
-        </div>
 
-        <div className="grid gap-8 lg:grid-cols-[0.95fr_1.05fr]">
-          <div className="rounded-none border border-neutral-800 bg-neutral-900/50 p-8">
-            <p className="text-xs font-mono uppercase tracking-[0.3em] text-neutral-500">Selected work</p>
-            <div className="mt-6 space-y-4">
-              {featuredProjects.map((project) => (
-                <div key={project.title} className="border-b border-neutral-800 pb-4 last:border-b-0 last:pb-0">
-                  <h3 className="text-xl font-semibold text-white">{project.title}</h3>
-                  <p className="mt-2 text-sm leading-7 text-neutral-400">{project.description}</p>
-                  <div className="mt-3 flex flex-wrap gap-2">
-                    {project.stack.map((item) => (
-                      <span key={item} className="text-xs uppercase tracking-[0.2em] text-neutral-500">
-                        {item}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-              ))}
             </div>
+
           </div>
 
-          <div className="rounded-none border border-neutral-800 bg-black/60 p-8">
-            <p className="text-xs font-mono uppercase tracking-[0.3em] text-neutral-500">Ready to build</p>
-            <h2 className="mt-3 text-3xl font-semibold text-white">A portfolio template that feels premium out of the box.</h2>
-            <p className="mt-4 text-neutral-400 leading-7">
-              Replace the copy, swap in your work, and this site is ready to become your own personal brand.
-            </p>
-            <TransitionLink
-              href="/about"
-              className="mt-8 inline-flex items-center text-sm font-semibold uppercase tracking-[0.2em] text-white transition hover:text-neutral-400"
-            >
-              Learn more about me →
-            </TransitionLink>
-          </div>
-        </div>
+        </motion.div>
+
       </section>
-    </div>
+
+    </main>
   );
 }

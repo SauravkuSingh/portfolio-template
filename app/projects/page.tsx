@@ -152,7 +152,7 @@ function BentoCard({ project, className, onClick, children }: BentoCardProps) {
 
       {/* Custom Hover Follow Cursor */}
       <motion.div
-        className="pointer-events-none absolute z-30 hidden md:flex items-center justify-center rounded-full bg-white text-black shadow-xl"
+        className="pointer-events-none absolute z-30 hidden md:flex items-center justify-center rounded-full bg-white/10 text-white shadow-lg backdrop-blur-md border border-white"
         style={{
           width: 56,
           height: 56,
@@ -166,7 +166,7 @@ function BentoCard({ project, className, onClick, children }: BentoCardProps) {
         animate={{ scale: isHovered ? 1 : 0, opacity: isHovered ? 1 : 0 }}
         transition={{ type: "spring", stiffness: 450, damping: 28 }}
       >
-        <ArrowUpRight className="w-6 h-6 text-neutral-950" strokeWidth={2.5} />
+        <ArrowUpRight className="w-6 h-6 text-white" strokeWidth={2.5} />
       </motion.div>
     </div>
   );
