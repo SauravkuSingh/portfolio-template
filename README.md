@@ -1,4 +1,4 @@
-# Portfolio Template 🚀
+# Portfolio Template 🚀.
 
 <img width="1908" height="960" alt="image" src="https://github.com/user-attachments/assets/65a80de0-ec07-4da4-a2de-eba13728777b" />
 
