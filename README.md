@@ -1,5 +1,11 @@
 # Portfolio Template 🚀
 
+<img width="1908" height="960" alt="image" src="https://github.com/user-attachments/assets/65a80de0-ec07-4da4-a2de-eba13728777b" />
+
+<img width="1905" height="946" alt="image" src="https://github.com/user-attachments/assets/eece9a88-bdbb-4972-969d-721e81c44490" />
+
+
+
 A modern, responsive portfolio template built with **Next.js**, **TypeScript**, and **CSS**. Perfect for developers, designers, and creative professionals looking to showcase their work and skills.
 
 ![Tech Stack](https://img.shields.io/badge/TypeScript-93.1%25-3178C6?style=flat-square&logo=typescript)
