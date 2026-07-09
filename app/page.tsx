@@ -4,10 +4,15 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import TransitionLink from "./components/TransitionLink";
+import WhyMe from "./components/WhyMe";
+import StackCards from "./components/StackCards";
+import HoverAccordion from "./components/HoverAccordion";
+import NextPage from "./components/NextPage";
 
 export default function Home() {
   return (
-    <main className="relative min-h-screen overflow-hidden bg-[#000000] text-white">
+    <>
+    <section className="relative min-h-screen overflow-hidden bg-[#000000] text-white">
 
       {/* Background Image */}
     
@@ -246,6 +251,13 @@ export default function Home() {
 
       </section>
 
-    </main>
+    </section>
+
+    {/* Below-hero sections */}
+    <WhyMe />
+    <StackCards />
+    <HoverAccordion />
+    <NextPage label="About" href="/about" />
+    </>
   );
 }

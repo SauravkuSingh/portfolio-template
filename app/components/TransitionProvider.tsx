@@ -34,7 +34,7 @@ export default function TransitionProvider({
     if (status === "entering") {
       const timer = setTimeout(() => {
         setStatus("idle");
-      }, 950); // 500ms duration + (4 * 80ms) delay + buffer
+      }, 750); // 400ms duration + (5 * 50ms) stagger + buffer
       return () => clearTimeout(timer);
     }
   }, [status]);
@@ -59,7 +59,7 @@ export default function TransitionProvider({
     // After exit animation covers the screen, push the new route
     setTimeout(() => {
       router.push(href);
-    }, 850); // 500ms duration + (4 * 80ms) delay + short buffer
+    }, 620); // 400ms duration + (5 * 50ms) stagger, minus a small overlap
   };
 
   // 6 vertical columns for the ladder animation
@@ -71,19 +71,24 @@ export default function TransitionProvider({
     return {
       hidden: {
         y: "-100%",
+        // Instant reset so the panels don't visibly sweep back up across the
+        // screen when the transition finishes and status returns to "idle".
+        transition: { duration: 0 },
       },
       covered: {
         y: "0%",
         transition: {
-          duration: 0.5,
-          delay: index * 0.08,
+          duration: 0.4,
+          delay: index * 0.05,
+          ease: [0.76, 0, 0.24, 1] as const,
         },
       },
       revealed: {
         y: "100%",
         transition: {
-          duration: 0.5,
-          delay: index * 0.08,
+          duration: 0.4,
+          delay: index * 0.05,
+          ease: [0.76, 0, 0.24, 1] as const,
         },
       },
     };

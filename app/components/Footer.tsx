@@ -1,10 +1,16 @@
 "use client";
 
 import React from "react";
+import { usePathname } from "next/navigation";
 import { ArrowUpRight, Globe2, SendHorizontal, Briefcase, Mail, MapPin } from "lucide-react";
 import TransitionLink from "./TransitionLink";
 
 export default function Footer() {
+  const pathname = usePathname();
+
+  // The footer's "Get in touch" block only belongs on the home page.
+  if (pathname !== "/") return null;
+
   return (
     <footer className="bg-black border-t border-neutral-900 text-white relative overflow-hidden">
       {/* Decorative background grid */}

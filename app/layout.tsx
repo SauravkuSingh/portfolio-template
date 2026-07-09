@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import "./globals.css";
 import TransitionProvider from "./components/TransitionProvider";
 import NavBar from "./components/NavBar";
-import Footer from "./components/Footer";
 import { Geist } from "next/font/google";
 import { cn } from "@/lib/utils";
 
@@ -33,7 +32,6 @@ export default function RootLayout({
           <div className="flex min-h-screen flex-col">
             <NavBar />
             <main className="">{children}</main>
-            <Footer />
           </div>
         </TransitionProvider>
       </body>

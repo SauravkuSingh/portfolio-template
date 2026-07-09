@@ -33,7 +33,7 @@ export default function NavBar() {
       {/* ================= NAVBAR ================= */}
 
       <header className="fixed top-0 left-0 z-50 w-full">
-        <div className="mx-auto max-w-[1700px]">
+        <div className="w-full">
           <div className="flex h-20 items-center justify-between border-b border-white/45 px-8 backdrop-blur-md">
 
             {/* LOGO */}
