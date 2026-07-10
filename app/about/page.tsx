@@ -61,7 +61,7 @@ export default function AboutPage() {
           </motion.p>
           <motion.div {...reveal} className="relative aspect-4/5 w-full max-w-sm overflow-hidden justify-self-end border border-white/10">
             <Image
-              src="/images/hero.jpg"
+              src="/images/Anime.jpg"
               alt="Anne Frank"
               fill
               className="object-cover object-center grayscale transition-all duration-700 hover:grayscale-0"

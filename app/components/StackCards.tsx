@@ -17,35 +17,35 @@ const cards: Card[] = [
     title: "Discovery",
     text: "We dig into your goals, users and market to frame the real problem before touching a pixel.",
     accent: "#ff4d17",
-    image: "https://picsum.photos/seed/discovery-09/1600/1000",
+    image: "images/image1.jpg",
   },
   {
     n: "02",
     title: "Strategy",
     text: "Positioning, structure and a clear plan — turning research into a direction everyone believes in.",
     accent: "#6ee7b7",
-    image: "https://picsum.photos/seed/strategy-14/1600/1000",
+    image: "images/image2.jpg",
   },
   {
     n: "03",
     title: "Design",
     text: "Interfaces with intent — considered type, motion and detail that make products feel premium.",
     accent: "#a78bfa",
-    image: "https://picsum.photos/seed/design-27/1600/1000",
+    image: "images/image3.jpg",
   },
   {
     n: "04",
     title: "Development",
     text: "Pixel-faithful, fast and accessible builds in modern React — animation baked in, not bolted on.",
     accent: "#60a5fa",
-    image: "https://picsum.photos/seed/development-31/1600/1000",
+    image: "images/image4.jpg",
   },
   {
     n: "05",
     title: "Launch",
     text: "We ship, measure and refine — so the work keeps paying off long after it goes live.",
     accent: "#fbbf24",
-    image: "https://picsum.photos/seed/launch-42/1600/1000",
+    image: "images/image5.jpg",
   },
 ];
 
@@ -126,7 +126,7 @@ function StackCard({
         className="absolute inset-0 h-full w-full object-cover"
       />
       {/* Legibility overlay */}
-      <div className="absolute inset-0 bg-black/55" />
+      <div className="absolute inset-0 bg-black/15" />
       <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-black/20" />
 
       <div className="relative mx-auto flex h-full max-w-[1700px] flex-col justify-center px-8 md:px-16">

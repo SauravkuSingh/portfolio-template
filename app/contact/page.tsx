@@ -86,9 +86,9 @@ export default function ContactPage() {
   }, [open]);
 
   return (
-    <section className="relative flex min-h-screen flex-col overflow-hidden bg-black text-white">
+    <section className="relative flex min-h-screen flex-col overflow-hidden bg-[url('/images/image1.jpg')] bg-cover bg-center bg-no-repeat text-white opacity-80">
       {/* Decorative grid */}
-      <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(to_right,#0f0f0f_1px,transparent_1px),linear-gradient(to_bottom,#0f0f0f_1px,transparent_1px)] bg-[size:5rem_5rem] opacity-40" />
+      <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(to_right,#fff_1px,transparent_1px),linear-gradient(to_bottom,#fff_1px,transparent_1px)] bg-[size:5rem_5rem] opacity-50" />
 
       {/* ================= TOP ================= */}
       <div className="relative z-10 mx-auto grid w-full max-w-[1700px] flex-1 grid-cols-1 content-start gap-12 px-8 pt-32 md:grid-cols-2 md:pt-40">
@@ -150,7 +150,7 @@ export default function ContactPage() {
       </div>
 
       {/* ================= BIG DISPLAY ================= */}
-      <div className="relative z-10 mx-auto w-full max-w-[1700px] px-6">
+      <div className="relative z-10 mx-auto w-full px-6">
         <motion.h1
           data-hover-hide
           initial={{ y: 120, opacity: 0 }}
@@ -187,9 +187,9 @@ export default function ContactPage() {
             whileHover={{ scale: 1.15 }}
             whileTap={{ scale: 0.92 }}
             aria-label="Open contact form"
-            className="pointer-events-auto flex h-12 w-12 items-center justify-center rounded-full bg-white text-black"
+            className="pointer-events-auto flex h-12 w-12 items-center justify-center rounded-full bg-white text-black/50"
           >
-            <Plus size={18} strokeWidth={2} />
+            <Plus size={20} strokeWidth={3} />
           </motion.button>
         </div>
       </motion.div>
@@ -228,7 +228,7 @@ function ContactModal({ onClose }: { onClose: () => void }) {
       exit={{ opacity: 0 }}
       transition={{ duration: 0.25 }}
       onClick={onClose}
-      className="fixed inset-0 z-[70] flex items-center justify-center bg-black/70 p-6 backdrop-blur-sm"
+      className="fixed inset-0 z-[70] flex items-center justify-center bg-black/50 p-6 backdrop-blur-sm"
       role="dialog"
       aria-modal="true"
       aria-label="Contact form"
@@ -239,14 +239,14 @@ function ContactModal({ onClose }: { onClose: () => void }) {
         exit={{ opacity: 0, scale: 0.96, y: 16 }}
         transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
         onClick={(e) => e.stopPropagation()}
-        className="relative w-full max-w-md border border-white/15 bg-neutral-950 p-8 sm:p-10"
+        className="relative w-full max-w-md rounded-xl border-2 border-white/65 bg-black/30 p-8 sm:p-10"
       >
         <button
           onClick={onClose}
           aria-label="Close contact form"
-          className="absolute right-4 top-4 flex h-9 w-9 items-center justify-center rounded-full border border-white/15 text-neutral-400 transition-colors hover:border-white hover:text-white"
+          className="absolute right-4 top-4 flex h-9 w-9 items-center justify-center text-neutral-400 transition-colors hover:border-white hover:text-white"
         >
-          <X size={16} />
+          <X size={23} />
         </button>
 
         <AnimatePresence mode="wait">
@@ -261,12 +261,12 @@ function ContactModal({ onClose }: { onClose: () => void }) {
                 <SendHorizontal size={22} />
               </div>
               <h2 className="font-serif text-3xl italic text-white">Thank you</h2>
-              <p className="mt-3 text-sm leading-6 text-neutral-400">
+              <p className="mt-3 text-sm leading-6 text-neutral-300">
                 Your message is on its way. I&apos;ll get back to you shortly.
               </p>
               <button
                 onClick={onClose}
-                className="mt-8 w-full border border-white/20 py-3 text-xs font-mono uppercase tracking-[0.25em] text-white transition-colors hover:bg-white hover:text-black"
+                className="mt-8 w-full border border-white/20 py-3 text-xs font-mono rounded-lg uppercase tracking-[0.25em] text-black transition-colors bg-white hover:bg-white/90"
               >
                 Close
               </button>
@@ -278,7 +278,7 @@ function ContactModal({ onClose }: { onClose: () => void }) {
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
             >
-              <p className="text-xs font-mono uppercase tracking-[0.3em] text-neutral-500">
+              <p className="text-xs font-mono uppercase tracking-[0.3em] text-neutral-200">
                 Say hello
               </p>
               <h2 className="mt-3 font-serif text-4xl italic text-white">
@@ -293,7 +293,7 @@ function ContactModal({ onClose }: { onClose: () => void }) {
                     value={name}
                     onChange={(e) => setName(e.target.value)}
                     placeholder="Your name"
-                    className="w-full border-b border-white/15 bg-transparent py-2 text-white placeholder:text-neutral-600 focus:border-white focus:outline-none"
+                    className="w-full border-b border-white/15 bg-transparent py-2 text-white placeholder:text-neutral-400 focus:border-white focus:outline-none"
                   />
                 </Field>
 
@@ -304,7 +304,7 @@ function ContactModal({ onClose }: { onClose: () => void }) {
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     placeholder="you@email.com"
-                    className="w-full border-b border-white/15 bg-transparent py-2 text-white placeholder:text-neutral-600 focus:border-white focus:outline-none"
+                    className="w-full border-b border-white/15 bg-transparent py-2 text-white placeholder:text-neutral-400 focus:border-white focus:outline-none"
                   />
                 </Field>
 
@@ -315,13 +315,13 @@ function ContactModal({ onClose }: { onClose: () => void }) {
                     value={message}
                     onChange={(e) => setMessage(e.target.value)}
                     placeholder="Tell me about your project…"
-                    className="w-full resize-none border-b border-white/15 bg-transparent py-2 text-white placeholder:text-neutral-600 focus:border-white focus:outline-none"
+                    className="w-full resize-none border-b border-white/15 bg-transparent py-2 text-white placeholder:text-neutral-400 focus:border-white focus:outline-none"
                   />
                 </Field>
 
                 <button
                   type="submit"
-                  className="group mt-2 flex w-full items-center justify-center gap-2 bg-white py-3.5 text-xs font-mono uppercase tracking-[0.25em] text-black transition-colors hover:bg-neutral-200"
+                  className="group mt-2 flex w-full items-center justify-center gap-2 bg-white rounded-md py-3.5 text-xs font-mono uppercase tracking-[0.25em] text-black transition-colors hover:bg-neutral-200"
                 >
                   Send message
                   <SendHorizontal
@@ -347,7 +347,7 @@ function Field({
 }) {
   return (
     <label className="block">
-      <span className="text-[10px] font-mono uppercase tracking-[0.25em] text-neutral-500">
+      <span className="text-[10px] font-mono uppercase tracking-[0.25em] text-neutral-200">
         {label}
       </span>
       <div className="mt-1">{children}</div>

@@ -23,7 +23,7 @@ export default function Home() {
         className="absolute inset-0"
       >
         <Image
-          src="/images/hero.jpg"
+          src="/images/Anime.jpg"
           alt="Anne"
           fill
           priority
@@ -234,7 +234,7 @@ export default function Home() {
               <div className="overflow-hidden">
 
                 <Image
-                  src="/images/hero.jpg"
+                  src="/images/Anime.jpg"
                   alt="Anne"
                   width={520}
                   height={620}

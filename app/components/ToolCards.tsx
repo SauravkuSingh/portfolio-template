@@ -12,12 +12,12 @@ type Tool = {
 };
 
 const tools: Tool[] = [
-  { slug: "figma", label: "Figma", pos: "left-6 top-44", rotate: -8, delay: 0 },
-  { slug: "sketch", label: "Sketch", pos: "left-24 top-[46%]", rotate: 7, delay: 0.5 },
-  { slug: "framer", label: "Framer", pos: "left-8 bottom-40", rotate: -6, delay: 1 },
-  { slug: "adobexd", label: "Adobe XD", pos: "right-8 top-48", rotate: 8, delay: 0.3 },
-  { slug: "adobephotoshop", label: "Photoshop", pos: "right-24 top-[48%]", rotate: -7, delay: 0.8 },
-  { slug: "adobeillustrator", label: "Illustrator", pos: "right-6 bottom-44", rotate: 6, delay: 1.3 },
+  { slug: "figma", label: "Figma", pos: "left-36 top-44", rotate: -8, delay: 0 },
+  { slug: "sketch", label: "Sketch", pos: "left-54 top-[24%]", rotate: 8, delay: 0.5 },
+  { slug: "framer", label: "Framer", pos: "left-36 top-[36%]", rotate: -8, delay: 1 },
+  { slug: "adobexd", label: "Adobe XD", pos: "right-36 top-44", rotate: 8, delay: 0.3 },
+  { slug: "adobephotoshop", label: "Photoshop", pos: "right-54 top-[24%]", rotate: -8, delay: 0.8 },
+  { slug: "adobeillustrator", label: "Illustrator", pos: "right-36 top-[36%]", rotate: 8, delay: 1.3 },
 ];
 
 function ToolCard({ tool }: { tool: Tool }) {
