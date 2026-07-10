@@ -46,15 +46,15 @@ export default function AboutPage() {
   return (
     <div className="bg-black text-white">
       {/* ================= HERO ================= */}
-      <section className="relative overflow-hidden pt-40 pb-20 md:pt-48">
+      <section className="relative overflow-hidden pt-40 pb-20 md:pt-30">
         {/* Top background image */}
         <div className="pointer-events-none absolute inset-0">
           <Image
-            src="/images/image2.jpg"
+            src="/images/image1.jpg"
             alt=""
             fill
             priority
-            className="object-cover object-center opacity-60"
+            className="object-cover object-center opacity-80"
           />
           <div className="absolute inset-0 bg-black/30" />
           <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-black" />
