@@ -29,7 +29,7 @@ export default function RootLayout({
         />
       </head>
       <body className="min-h-full bg-neutral-950 text-white" suppressHydrationWarning>
-        {/* <SmoothScroll /> */}
+        <SmoothScroll />
         <TransitionProvider>
           <div className="flex min-h-screen flex-col">
             <NavBar />
