@@ -3,6 +3,7 @@ import "./globals.css";
 import TransitionProvider from "./components/TransitionProvider";
 import NavBar from "./components/NavBar";
 import SmoothScroll from "./components/SmoothScroll";
+import PageTransition from "./components/PageTransition";
 import { Geist } from "next/font/google";
 import { cn } from "@/lib/utils";
 
@@ -33,7 +34,9 @@ export default function RootLayout({
         <TransitionProvider>
           <div className="flex min-h-screen flex-col">
             <NavBar />
-            <main className="">{children}</main>
+            <main className="">
+              <PageTransition>{children}</PageTransition>
+            </main>
           </div>
         </TransitionProvider>
       </body>

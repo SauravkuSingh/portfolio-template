@@ -12,6 +12,7 @@ export default function TransitionLink({
   href,
   children,
   className,
+  onClick,
   ...props
 }: TransitionLinkProps) {
   const { navigateTo } = useTransition();
@@ -20,7 +21,9 @@ export default function TransitionLink({
     // Prevent default routing
     e.preventDefault();
 
-    // Trigger our custom animated navigation
+    // Run any caller-provided handler first (e.g. closing the menu),
+    // then trigger our custom animated ladder navigation.
+    onClick?.(e);
     navigateTo(href);
   };
 

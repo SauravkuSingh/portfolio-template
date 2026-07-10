@@ -92,9 +92,23 @@
 
 /* Smooth scrolling is handled by Lenis (see SmoothScroll), not CSS. */
 
-/* Always reserve vertical scrollbar to prevent layout shift during overlays */
+/* Reserve the vertical scroll axis (prevents layout shift on overlays) but
+   never paint a visible scrollbar — page still scrolls via wheel / touch / Lenis. */
 html {
   overflow-y: scroll;
+}
+
+/* Hide native scrollbars everywhere (including nested overlays like the
+   project detail view, which was showing a second bar). */
+* {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* legacy Edge / IE */
+}
+
+*::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  display: none; /* Chromium / Safari */
 }
 
 body {

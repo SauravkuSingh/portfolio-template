@@ -50,7 +50,7 @@ export default function NavBar() {
 
             <button
               onClick={() => setOpen(!open)}
-              className="relative z-50 flex h-15 w-15 items-center justify-center"
+              className="relative z-50 flex h-15 w-15 cursor-pointer items-center justify-center"
             >
               <AnimatePresence mode="wait">
                 {open ? (

@@ -34,20 +34,21 @@ export default function TransitionProvider({
     if (status === "entering") {
       const timer = setTimeout(() => {
         setStatus("idle");
-      }, 750); // 400ms duration + (5 * 50ms) stagger + buffer
+      }, 620); // 340ms duration + (5 * 40ms) stagger + buffer
       return () => clearTimeout(timer);
     }
   }, [status]);
 
-  // Handle pathname change (after navigation completes)
+  // Reveal only once navigation has actually landed on the new route — at that
+  // point the screen is fully covered. Hold briefly so the new page can render
+  // behind the panels, then reveal it, so content appears AFTER the animation.
   useEffect(() => {
-    if (status === "exiting" && pendingHref === pathname) {
-      setStatus("entering");
-      setPendingHref(null);
-    } else if (status === "exiting" && pendingHref) {
-      // Fallback: if the path changes but doesn't match exactly (due to queries/hashes)
-      setStatus("entering");
-      setPendingHref(null);
+    if (status === "exiting" && pendingHref && pathname === pendingHref) {
+      const timer = setTimeout(() => {
+        setStatus("entering");
+        setPendingHref(null);
+      }, 300); // hold the fully-covered screen so the cover clearly completes first
+      return () => clearTimeout(timer);
     }
   }, [pathname, status, pendingHref]);
 
@@ -56,10 +57,11 @@ export default function TransitionProvider({
     setStatus("exiting");
     setPendingHref(href);
 
-    // After exit animation covers the screen, push the new route
+    // Push only after the panels have fully covered the screen, so the page
+    // swap happens completely hidden behind them.
     setTimeout(() => {
       router.push(href);
-    }, 620); // 400ms duration + (5 * 50ms) stagger, minus a small overlap
+    }, 560); // 340ms duration + (5 * 40ms) stagger + small buffer
   };
 
   // 6 vertical columns for the ladder animation
@@ -78,17 +80,17 @@ export default function TransitionProvider({
       covered: {
         y: "0%",
         transition: {
-          duration: 0.4,
-          delay: index * 0.05,
-          ease: [0.76, 0, 0.24, 1] as const,
+          duration: 0.34,
+          delay: index * 0.04,
+          ease: [0.65, 0, 0.35, 1] as const,
         },
       },
       revealed: {
         y: "100%",
         transition: {
-          duration: 0.4,
-          delay: index * 0.05,
-          ease: [0.76, 0, 0.24, 1] as const,
+          duration: 0.34,
+          delay: index * 0.04,
+          ease: [0.65, 0, 0.35, 1] as const,
         },
       },
     };

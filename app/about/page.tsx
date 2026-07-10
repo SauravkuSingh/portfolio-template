@@ -72,11 +72,11 @@ export default function AboutPage() {
           Designer &amp; developer crafting memorable digital work.
         </motion.h1>
 
-        <div className="mt-16 grid gap-12 border-t border-white/10 pt-12 md:grid-cols-[1.2fr_1fr]">
+        <div className="mt-16 grid gap-12 border-t border-white/10 pt-12 md:grid-cols-[1.7fr_1fr]">
           <ScrollRevealText
             segments={introSegments}
             animateOnEnter
-            className="max-w-4xl font-sans text-3xl font-light leading-[1.6] text-white md:text-5xl md:leading-[1.5]"
+            className="max-w-5xl font-sans text-3xl font-light leading-[1.6] text-white md:text-5xl md:leading-[1.5]"
           />
           <motion.div {...reveal} className="relative aspect-4/5 w-full max-w-sm overflow-hidden justify-self-end border border-white/10">
             <Image

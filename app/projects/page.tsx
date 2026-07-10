@@ -28,8 +28,8 @@ const projects: Project[] = [
     description: "A premium agency website with immersive storytelling and elegant motion design.",
     role: "Design + Lead Development",
     year: "2026",
-    image: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=1200&q=80",
-    imageDetail: "https://images.unsplash.com/photo-1600132806370-bf17e65e942f?auto=format&fit=crop&w=1200&q=80",
+    image: "/images/image1.jpg",
+    imageDetail: "/images/image2.jpg",
     slogan: "Reimagining digital presence for global creative leaders.",
     fullDescription: "Northstar Studio is a premium digital agency crafting bespoke web experiences for design-led brands. We designed and engineered a fully fluid, immersive storytelling experience that leverages smooth momentum scrolling, custom GLSL shaders, and rich multi-layered typography animations. The result is an award-winning portal that transforms passive visitors into highly engaged collaborators, raising brand value and establishing a new digital benchmark.",
     stack: ["Next.js", "Framer Motion", "Three.js", "Tailwind CSS", "GLSL Shaders"],
@@ -47,8 +47,8 @@ const projects: Project[] = [
     description: "A modern analytics platform for financial teams with clear dashboards and fast workflows.",
     role: "Frontend Architecture",
     year: "2025",
-    image: "https://images.unsplash.com/photo-1634017839464-5c339ebe3cb4?auto=format&fit=crop&w=1200&q=80",
-    imageDetail: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=80",
+    image: "/images/image2.jpg",
+    imageDetail: "/images/image3.jpg",
     slogan: "Next-generation asset visualization and real-time ledger intelligence.",
     fullDescription: "Aurelia Finance provides complex asset managers with an intuitive, near-zero latency dashboard to visualize multi-chain portfolios and ledger entries. By architecting a customized state management solution and leveraging hardware-accelerated canvas-based charting, we reduced visualization computation time by 60% and enabled beautiful, interactive real-time data streaming.",
     stack: ["React", "TypeScript", "Canvas API", "Tailwind CSS", "Zustand", "Recharts"],
@@ -66,8 +66,8 @@ const projects: Project[] = [
     description: "A conversion-focused storefront experience for a fast-growing retail brand.",
     role: "Product Design + Dev",
     year: "2025",
-    image: "https://images.unsplash.com/photo-1614741118887-7a4ee193a5fa?auto=format&fit=crop&w=1200&q=80",
-    imageDetail: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=1200&q=80",
+    image: "/images/image3.jpg",
+    imageDetail: "/images/image4.jpg",
     slogan: "Tailoring headless commerce for the modern minimalist brand.",
     fullDescription: "Lumen is a high-end apparel atelier demanding a storefront that is as elegant as their physical garments. We designed and engineered a headless commerce solution using Shopify API, combining instant search, fluid bag-to-checkout flows, and cinematic product zoom animations. The checkout experience is optimized for mobile-first buyers, drastically lowering cart abandonment.",
     stack: ["Next.js", "Shopify API", "Framer Motion", "Tailwind CSS", "Radix UI"],
@@ -85,8 +85,8 @@ const projects: Project[] = [
     description: "Interactive playground mapping large-language model neural pathways in real-time.",
     role: "Creative Technologist",
     year: "2026",
-    image: "https://images.unsplash.com/photo-1633356122544-f134324a6cee?auto=format&fit=crop&w=1200&q=80",
-    imageDetail: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=1200&q=80",
+    image: "/images/image4.jpg",
+    imageDetail: "/images/image5.jpg",
     slogan: "Interactive playground mapping large-language model neural pathways.",
     fullDescription: "Nova AI Engine maps structural neural attention layers during multi-modal inference. Designed for researchers and AI enthusiasts, the playground makes complex mathematical weights visible by rendering live multi-layered node diagrams using high-performance 3D force-directed graphs. It turns abstract tensors into tangible, stunningly beautiful visual landscapes.",
     stack: ["Next.js", "Three.js", "React Three Fiber", "WebWorkers API", "Tailwind CSS"],
@@ -104,8 +104,8 @@ const projects: Project[] = [
     description: "Bespoke spatial productivity workspace featuring drag-and-drop window frames and canvas mappings.",
     role: "Full Stack Product",
     year: "2026",
-    image: "https://images.unsplash.com/photo-1600132806370-bf17e65e942f?auto=format&fit=crop&w=1200&q=80",
-    imageDetail: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=1200&q=80",
+    image: "/images/image5.jpg",
+    imageDetail: "/images/image1.jpg",
     slogan: "Bespoke spatial productivity workspace on the web.",
     fullDescription: "Aether is a spatial productivity desktop in the browser, built to organize files, documents, calendar feeds, and chats in a dynamic, drag-and-drop workspace. We engineered a highly stable, performance-tuned multi-window layout with canvas-based connectivity maps, dynamic grid-snapping, and persistent state saving across client sessions.",
     stack: ["Next.js", "Framer Motion", "Tailwind CSS", "IndexedDB", "WebRTC"],
@@ -382,6 +382,7 @@ export default function ProjectsPage() {
       <AnimatePresence>
         {activeProject && (
           <motion.div
+            data-lenis-prevent
             className="fixed inset-0 z-50 overflow-y-auto bg-neutral-950 text-white"
             initial={{
               clipPath: `circle(0% at ${clickOrigin.x}px ${clickOrigin.y}px)`,
