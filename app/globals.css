@@ -90,9 +90,7 @@
   box-sizing: border-box;
 }
 
-html {
-  scroll-behavior: smooth;
-}
+/* Smooth scrolling is handled by Lenis (see SmoothScroll), not CSS. */
 
 /* Always reserve vertical scrollbar to prevent layout shift during overlays */
 html {

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import TransitionProvider from "./components/TransitionProvider";
 import NavBar from "./components/NavBar";
+import SmoothScroll from "./components/SmoothScroll";
 import { Geist } from "next/font/google";
 import { cn } from "@/lib/utils";
 
@@ -27,7 +28,8 @@ export default function RootLayout({
           rel="stylesheet"
         />
       </head>
-      <body className="min-h-full bg-neutral-950 text-white">
+      <body className="min-h-full bg-neutral-950 text-white" suppressHydrationWarning>
+        {/* <SmoothScroll /> */}
         <TransitionProvider>
           <div className="flex min-h-screen flex-col">
             <NavBar />
