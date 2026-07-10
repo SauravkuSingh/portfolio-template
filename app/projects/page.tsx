@@ -4,6 +4,7 @@ import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ArrowUpRight, ArrowLeft, Calendar, Briefcase, Code, CheckCircle } from "lucide-react";
 import { cn } from "@/lib/utils";
+import NextPage from "../components/NextPage";
 
 interface Project {
   id: string;
@@ -194,6 +195,7 @@ export default function ProjectsPage() {
   };
 
   return (
+    <div className="bg-black text-white">
     <section className="mx-auto flex max-w-7xl flex-col gap-10 px-6 py-16 md:px-10 lg:px-12 lg:py-24">
       <div className="max-w-3xl space-y-5">
         <p className="text-xs font-mono uppercase tracking-[0.3em] text-neutral-500">Selected Works</p>
@@ -371,6 +373,10 @@ export default function ProjectsPage() {
         </BentoCard>
 
       </div>
+      </section>
+
+      {/* Next page → Contact */}
+      <NextPage label="Contact" href="/contact" />
 
       {/* Circle Expanding Details Page Overlay */}
       <AnimatePresence>
@@ -526,6 +532,6 @@ export default function ProjectsPage() {
           </motion.div>
         )}
       </AnimatePresence>
-    </section>
+    </div>
   );
 }
