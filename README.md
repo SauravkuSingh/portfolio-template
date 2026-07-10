@@ -1,8 +1,16 @@
 # Portfolio Template 🚀.
 
-<img width="1908" height="960" alt="image" src="https://github.com/user-attachments/assets/65a80de0-ec07-4da4-a2de-eba13728777b" />
+<img width="1903" height="956" alt="image" src="https://github.com/user-attachments/assets/b5182a67-b51f-4968-b7b4-e31847d42c4c" />
+
+<img width="1905" height="1079" alt="image" src="https://github.com/user-attachments/assets/5cfb30ab-83c9-45d9-9c88-65c82c8dde4e" />
+
+
 
 <img width="1905" height="946" alt="image" src="https://github.com/user-attachments/assets/eece9a88-bdbb-4972-969d-721e81c44490" />
+
+
+<img width="1904" height="955" alt="image" src="https://github.com/user-attachments/assets/829e0b64-adcd-4122-910f-88b2e844c4f8" />
+
 
 
 
