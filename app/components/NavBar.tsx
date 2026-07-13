@@ -120,13 +120,13 @@ export default function NavBar() {
 
               <div className="col-span-3 border-r border-white/10 p-30">
 
-                <div className="mt-32">
+                <div className="mt-12">
 
-                  <p className="text-sm uppercase tracking-[0.4em] text-neutral-400">
+                  <p className="text-sm uppercase tracking-[0.4em] text-neutral-200">
                     Navigation
                   </p>
 
-                  <div className="mt-8 space-y-6 text-neutral-300">
+                  <div className="mt-8 space-y-6 text-white">
 
                     <p>Available for freelance</p>
 
@@ -194,31 +194,47 @@ export default function NavBar() {
 
                   <div>
 
-                    <p className="text-xs uppercase tracking-[0.4em] text-neutral-400">
+                    <p className="text-sm uppercase tracking-[0.4em] text-neutral-200">
                       Email
                     </p>
 
-                    <p className="mt-3 text-lg">
-                      hello@anne.com
+                    <p className="mt-3 text-lg hover:text-white/60 cursor-pointer">
+                      anne@gmail.com
                     </p>
 
                   </div>
 
                   <div>
 
-                    <p className="text-xs uppercase tracking-[0.4em] text-neutral-400">
+                    <p className="text-sm uppercase tracking-[0.4em] text-neutral-200">
                       Social
                     </p>
 
-                    <div className="mt-3 space-y-3">
+                   <div className="mt-3 space-y-3">
+                    <TransitionLink
+                      href="https://instagram.com/your_username"
+                      target="_blank"
+                      className="block transition-colors duration-300 hover:text-white/60"
+                    >
+                      Instagram
+                    </TransitionLink>
 
-                      <p>Instagram</p>
+                    <TransitionLink
+                      href="https://dribbble.com/your_username"
+                      target="_blank"
+                      className="block transition-colors duration-300 hover:text-white/60"
+                    >
+                      Dribbble
+                    </TransitionLink>
 
-                      <p>Dribbble</p>
-
-                      <p>Behance</p>
-
-                    </div>
+                    <TransitionLink
+                      href="https://behance.net/your_username"
+                      target="_blank"
+                      className="block transition-colors duration-300 hover:text-white/60"
+                    >
+                      Behance
+                    </TransitionLink>
+                  </div>
 
                   </div>
 

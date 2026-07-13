@@ -17,7 +17,7 @@ import {
   Mail,
 } from "lucide-react";
 
-const EMAIL = "anne@example.com";
+const EMAIL = "anne@gmail.com";
 
 const socials = [
   { label: "Website", icon: Globe2, href: "https://example.com" },
@@ -27,8 +27,8 @@ const socials = [
 ];
 
 const locations = [
-  { city: "Mumbai", lines: ["Bandra West,", "Mumbai 400050,", "India"], phone: "+91 98 1234 5678" },
-  { city: "Remote", lines: ["Available", "worldwide,", "GMT +5:30"], phone: "hello@anne.com" },
+  { city: "Mumbai", lines: ["Bandra West,", "Mumbai 400050,", "India"]},
+  { city: "Remote", lines: ["Available", "worldwide,", "GMT +5:30"]},
 ];
 
 export default function ContactPage() {
@@ -86,7 +86,7 @@ export default function ContactPage() {
   }, [open]);
 
   return (
-    <section className="relative flex min-h-screen flex-col overflow-hidden bg-[url('/images/image1.jpg')] bg-cover bg-center bg-no-repeat text-white opacity-80">
+    <section className="relative flex min-h-screen flex-col overflow-hidden bg-[url('/images/image1.jpg')] bg-cover bg-center bg-no-repeat text-white">
       {/* Decorative grid */}
       <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(to_right,#fff_1px,transparent_1px),linear-gradient(to_bottom,#fff_1px,transparent_1px)] bg-[size:5rem_5rem] opacity-50" />
 
@@ -94,10 +94,10 @@ export default function ContactPage() {
       <div className="relative z-10 mx-auto grid w-full max-w-[1700px] flex-1 grid-cols-1 content-start gap-12 px-8 pt-32 md:grid-cols-2 md:pt-40">
         {/* LEFT — stay up to date */}
         <div data-hover-hide className="self-start">
-          <p className="text-xs font-mono uppercase tracking-[0.3em] text-neutral-400">
+          <p className="text-lg font-mono uppercase tracking-[0.3em] text-white">
             Stay up to date
           </p>
-          <div className="mt-5 flex items-center gap-3">
+          <div className="mt-5 flex items-center gap-4">
             {socials.map(({ label, icon: Icon, href }) => (
               <a
                 key={label}
@@ -105,9 +105,9 @@ export default function ContactPage() {
                 target={href.startsWith("http") ? "_blank" : undefined}
                 rel="noreferrer"
                 aria-label={label}
-                className="flex h-11 w-11 items-center justify-center rounded-full border border-white/20 text-neutral-300 transition-colors duration-300 hover:border-white hover:bg-white hover:text-black"
+                className="flex h-11 w-11 items-center justify-center text-white/60 hover:text-white"
               >
-                <Icon size={18} />
+                <Icon size={26} />
               </a>
             ))}
           </div>
@@ -115,34 +115,31 @@ export default function ContactPage() {
 
         {/* RIGHT — write to + locations */}
         <div data-hover-hide className="self-start md:pl-8">
-          <p className="text-xs font-mono uppercase tracking-[0.3em] text-neutral-400">
+          <p className="text-lg font-mono uppercase tracking-[0.3em] text-white">
             Write to
           </p>
           <a
             href={`mailto:${EMAIL}`}
-            className="group mt-4 inline-flex items-center gap-2 font-serif text-3xl italic text-white transition-colors hover:text-neutral-400 sm:text-4xl"
+            className="group mt-4 inline-flex items-center gap-2 font-serif text-3xl italic text-white transition-colors hover:text-neutral-300 sm:text-4xl"
           >
             {EMAIL}
             <ArrowUpRight
-              size={22}
+              size={35}
               className="translate-y-1 transition-transform group-hover:-translate-y-0 group-hover:translate-x-1"
             />
           </a>
 
-          <div className="mt-14 grid grid-cols-2 gap-8">
-            {locations.map(({ city, lines, phone }) => (
+          <div className="mt-8 grid grid-cols-2 gap-8">
+            {locations.map(({ city, lines }) => (
               <div key={city}>
-                <p className="text-xs font-mono font-semibold uppercase tracking-[0.2em] text-white">
+                <p className="text-lg font-mono font-semibold uppercase tracking-[0.2em] text-white">
                   {city}
                 </p>
-                <address className="mt-4 space-y-0.5 not-italic text-sm leading-6 text-neutral-400">
+                <address className="mt-4 space-y-0.5 not-italic text-md leading-6 text-neutral-100">
                   {lines.map((line) => (
                     <p key={line}>{line}</p>
                   ))}
                 </address>
-                <p className="mt-4 text-sm text-neutral-300 underline underline-offset-4">
-                  {phone}
-                </p>
               </div>
             ))}
           </div>
@@ -163,7 +160,7 @@ export default function ContactPage() {
       </div>
 
       {/* ================= BOTTOM BAR ================= */}
-      <div className="relative z-10 mx-auto w-full max-w-[1700px] border-t border-white/10 px-8 py-6 text-xs font-mono uppercase tracking-[0.2em] text-neutral-500">
+      <div className="relative z-10 mx-auto w-full max-w-[1700px] border-t border-white/10 px-8 py-6 text-lg text-center font-mono uppercase tracking-[0.2em] text-white">
         <p data-hover-hide className="inline-block">
           © {new Date().getFullYear()} Anne Frank. All rights reserved.
         </p>
