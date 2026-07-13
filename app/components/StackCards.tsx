@@ -7,7 +7,6 @@ type Card = {
   n: string;
   title: string;
   text: string;
-  accent: string;
   image: string;
 };
 
@@ -15,36 +14,42 @@ const cards: Card[] = [
   {
     n: "01",
     title: "Discovery",
-    text: "We dig into your goals, users and market to frame the real problem before touching a pixel.",
-    accent: "#ff4d17",
+    text: `We dig into your goals, users and market to frame the real problem before touching a pixel.
+    We dig into your goals, users and market to frame the real problem before touching a pixel.
+    We dig into your goals, users and market to frame the real problem before touching a pixel.`,
     image: "images/image1.jpg",
   },
   {
     n: "02",
     title: "Strategy",
-    text: "Positioning, structure and a clear plan — turning research into a direction everyone believes in.",
-    accent: "#6ee7b7",
+    text: `We dig into your goals, users and market to frame the real problem before touching a pixel.
+    We dig into your goals, users and market to frame the real problem before touching a pixel.
+    We dig into your goals, users and market to frame the real problem before touching a pixel.`,
     image: "images/image2.jpg",
   },
   {
     n: "03",
     title: "Design",
-    text: "Interfaces with intent — considered type, motion and detail that make products feel premium.",
+    text: `Interfaces with intent — considered type, motion and detail that make products feel premium.
+    Interfaces with intent — considered type, motion and detail that make products feel premium.
+    Interfaces with intent — considered type, motion and detail that make products feel premium.`,
     accent: "#a78bfa",
     image: "images/image3.jpg",
   },
   {
     n: "04",
     title: "Development",
-    text: "Pixel-faithful, fast and accessible builds in modern React — animation baked in, not bolted on.",
-    accent: "#60a5fa",
+    text: `We dig into your goals, users and market to frame the real problem before touching a pixel.
+    We dig into your goals, users and market to frame the real problem before touching a pixel.
+    We dig into your goals, users and market to frame the real problem before touching a pixel.`,
     image: "images/image4.jpg",
   },
   {
     n: "05",
     title: "Launch",
-    text: "We ship, measure and refine — so the work keeps paying off long after it goes live.",
-    accent: "#fbbf24",
+    text: `We dig into your goals, users and market to frame the real problem before touching a pixel.
+    We dig into your goals, users and market to frame the real problem before touching a pixel.
+    We dig into your goals, users and market to frame the real problem before touching a pixel.`,
     image: "images/image5.jpg",
   },
 ];
@@ -131,21 +136,20 @@ function StackCard({
 
       <div className="relative mx-auto flex h-full max-w-[1700px] flex-col justify-center px-8 md:px-16">
         <span
-          className="font-mono text-sm font-semibold uppercase tracking-[0.3em]"
-          style={{ color: card.accent }}
+          className="font-mono text-lg font-semibold uppercase tracking-[0.3em]"
         >
           {card.n} — {card.title}
         </span>
-        <h3 className="mt-6 max-w-4xl font-serif text-5xl font-light italic leading-[1.05] text-white md:text-8xl">
+        <h3 className="mt-6 max-w-4xl font-serif text-5xl leading-[1.05] text-white md:text-8xl">
           {card.title}
         </h3>
-        <p className="mt-8 max-w-xl text-lg leading-8 text-neutral-400">
+        <p className="mt-8 max-w-xl text-xl leading-8 text-white">
           {card.text}
         </p>
 
         {/* Big ghost index in the corner */}
         <span
-          className="pointer-events-none absolute -bottom-10 right-4 select-none font-serif text-[28vw] font-light italic leading-none text-white/25 md:text-[20vw]"
+          className="pointer-events-none absolute -bottom-10 right-4 select-none font-serif text-[28vw] font-light italic leading-none text-white/35 md:text-[20vw]"
         >
           {card.n}
         </span>

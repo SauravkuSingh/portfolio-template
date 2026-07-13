@@ -94,7 +94,7 @@ export default function WhyMe() {
       </div>
 
       {/* Marquee banner */}
-      <div className="mt-24 overflow-hidden border-y border-white/10 bg-white py-4">
+      <div className="mt-24 z-50 relative overflow-hidden border-y border-white/10 bg-white py-4">
         <motion.div
           className="flex w-max whitespace-nowrap"
           animate={{ x: ["0%", "-50%"] }}
