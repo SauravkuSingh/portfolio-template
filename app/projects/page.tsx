@@ -257,7 +257,7 @@ export default function ProjectsPage() {
           {/* Metadata Section */}
           <div className="mt-6 flex-1 flex flex-col justify-between">
             <div>
-              <span className="text-xs font-mono tracking-widest text-neutral-400 uppercase">{projects[1].role}</span>
+              <span className="text-xs font-mono tracking-widest text-white uppercase">{projects[1].role}</span>
               <h3 className="mt-2 text-2xl font-semibold text-white tracking-tight">{projects[1].title}</h3>
             </div>
             <p className="mt-3 text-sm text-neutral-400 leading-relaxed font-sans line-clamp-3 group-hover:text-neutral-300 transition-colors duration-300">
@@ -419,10 +419,10 @@ export default function ProjectsPage() {
                 <img
                   src={activeProject.image}
                   alt={activeProject.title}
-                  className="h-full w-full object-cover opacity-60 scale-105"
+                  className="h-full w-full object-cover opacity-80 scale-105"
                 />
                 <div className="absolute bottom-12 left-6 right-6 mx-auto max-w-5xl z-20">
-                  <span className="text-xs font-mono uppercase tracking-[0.3em] text-neutral-400 bg-white/10 px-3 py-1 rounded-full border border-white/10 backdrop-blur-md">
+                  <span className="text-xs font-mono uppercase tracking-[0.3em] text-white bg-white/10 px-3 py-1 rounded-full border border-white/10 backdrop-blur-md">
                     {activeProject.role}
                   </span>
                   <h1 className="mt-6 text-4xl font-bold tracking-tight text-white sm:text-6xl md:text-7xl font-sans">
@@ -443,7 +443,7 @@ export default function ProjectsPage() {
                     <h2 className="text-2xl font-semibold text-white tracking-tight border-b border-white/10 pb-3 font-sans">
                       Project Overview
                     </h2>
-                    <p className="text-base md:text-lg leading-relaxed text-neutral-300 font-sans">
+                    <p className="text-base font-serif md:text-lg leading-relaxed text-neutral-300">
                       {activeProject.fullDescription}
                     </p>
                   </div>
